@@ -1,6 +1,7 @@
 # Simple Nuxt 3 App
 
-Simple application with using nuxt 3, vuetify, socket module.
+
+Simple real time users queues application with using nuxt 3, vuetify, socket module.
 
 ## Setup
 
