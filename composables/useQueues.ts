@@ -1,5 +1,7 @@
-import { usersQueues, Status } from '@prisma/client'
 import useFetchQueues from '~/composables/Fetch/useFetchQueues'
+import { usersQueues } from '@prisma/client'
+
+const statuses = [ 'new', 'ready', 'canceled', 'in_work', 'processed' ];
 
 export const useQueues = () => {
   const isFetching = ref(false)
@@ -17,13 +19,7 @@ export const useQueues = () => {
   const readyQueues = computed(() => (allQueues.value.filter(item => item.status === 'ready')))
 
   return {
-    statuses: [
-      Status.ready,
-      Status.new,
-      Status.canceled,
-      Status.in_work,
-      Status.processed
-    ],
+    statuses,
     isFetching,
     allQueues,
     newQueues,
