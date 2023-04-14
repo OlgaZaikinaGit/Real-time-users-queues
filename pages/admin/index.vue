@@ -1,6 +1,7 @@
 <script setup>
 import useFetchUpdateQueue from '~/composables/Fetch/useFetchUpdateQueue'
 import { useQueuesPagination } from '~/composables/useQueuesPagination'
+import { useQueues } from '~/composables/useQueues'
 
 useHead({
   title: 'Admin panel'
